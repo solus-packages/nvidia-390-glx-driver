@@ -3,8 +3,8 @@
         <Name>nvidia-390-glx-driver</Name>
         <Homepage>https://nvidia.com</Homepage>
         <Packager>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>Thomas Staudinger</Name>
+            <Email>staudi.kaos@gmail.com</Email>
         </Packager>
         <License>EULA</License>
         <PartOf>kernel.drivers</PartOf>
@@ -20,7 +20,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="1">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="2">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/4.9.135-112.lts/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -28,6 +28,11 @@
             <Path fileType="data">/lib/modules/4.9.135-112.lts/kernel/drivers/video/nvidia-uvm.ko</Path>
             <Path fileType="data">/lib/modules/4.9.135-112.lts/kernel/drivers/video/nvidia.ko</Path>
         </Files>
+        <Conflicts>
+            <Package>nvidia-340-glx-driver</Package>
+            <Package>nvidia-beta-driver</Package>
+            <Package>nvidia-glx-driver</Package>
+        </Conflicts>
     </Package>
     <Package>
         <Name>nvidia-390-glx-driver-32bit</Name>
@@ -36,7 +41,7 @@
 </Description>
         <PartOf>xorg.driver</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="1">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="2">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so</Path>
@@ -97,6 +102,11 @@
             <Path fileType="library">/usr/lib32/vdpau/libvdpau_nvidia.so.1</Path>
             <Path fileType="library">/usr/lib32/vdpau/libvdpau_nvidia.so.390.87</Path>
         </Files>
+        <Conflicts>
+            <Package>nvidia-340-glx-driver-32bit</Package>
+            <Package>nvidia-beta-driver-32bit</Package>
+            <Package>nvidia-glx-driver-32bit</Package>
+        </Conflicts>
     </Package>
     <Package>
         <Name>nvidia-390-glx-driver-common</Name>
@@ -216,7 +226,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="1">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="2">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/4.18.16-96.current/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -224,6 +234,11 @@
             <Path fileType="data">/lib/modules/4.18.16-96.current/kernel/drivers/video/nvidia-uvm.ko</Path>
             <Path fileType="data">/lib/modules/4.18.16-96.current/kernel/drivers/video/nvidia.ko</Path>
         </Files>
+        <Conflicts>
+            <Package>nvidia-340-glx-driver-current</Package>
+            <Package>nvidia-beta-driver-current</Package>
+            <Package>nvidia-glx-driver-current</Package>
+        </Conflicts>
     </Package>
     <Package>
         <Name>nvidia-390-glx-driver-modaliases</Name>
@@ -237,12 +252,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2018-10-21</Date>
+        <Update release="2">
+            <Date>2018-10-28</Date>
             <Version>390.87</Version>
             <Comment>Packaging update</Comment>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>Thomas Staudinger</Name>
+            <Email>staudi.kaos@gmail.com</Email>
         </Update>
     </History>
 </PISI>
