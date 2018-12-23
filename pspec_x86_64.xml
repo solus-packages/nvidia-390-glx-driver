@@ -3,8 +3,8 @@
         <Name>nvidia-390-glx-driver</Name>
         <Homepage>https://nvidia.com</Homepage>
         <Packager>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>Longwu Ou</Name>
+            <Email>xulongwu4@gmail.com</Email>
         </Packager>
         <License>EULA</License>
         <PartOf>kernel.drivers</PartOf>
@@ -20,7 +20,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="11">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="12">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/4.9.145-120.lts/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -42,11 +42,11 @@
 </Description>
         <PartOf>xorg.driver</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="11">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="12">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so</Path>
-            <Path fileType="library">/usr/lib32/libEGL_nvidia.so.1</Path>
+            <Path fileType="library">/usr/lib32/libEGL_nvidia.so.0</Path>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libGLESv1_CM_nvidia.so</Path>
             <Path fileType="library">/usr/lib32/libGLESv1_CM_nvidia.so.1</Path>
@@ -64,25 +64,20 @@
             <Path fileType="library">/usr/lib32/libnvcuvid.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvcuvid.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libnvidia-compiler.so</Path>
-            <Path fileType="library">/usr/lib32/libnvidia-compiler.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvidia-compiler.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libnvidia-eglcore.so</Path>
-            <Path fileType="library">/usr/lib32/libnvidia-eglcore.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvidia-eglcore.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libnvidia-encode.so</Path>
             <Path fileType="library">/usr/lib32/libnvidia-encode.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvidia-encode.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libnvidia-fatbinaryloader.so</Path>
-            <Path fileType="library">/usr/lib32/libnvidia-fatbinaryloader.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvidia-fatbinaryloader.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libnvidia-fbc.so</Path>
             <Path fileType="library">/usr/lib32/libnvidia-fbc.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvidia-fbc.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libnvidia-glcore.so</Path>
-            <Path fileType="library">/usr/lib32/libnvidia-glcore.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvidia-glcore.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libnvidia-glsi.so</Path>
-            <Path fileType="library">/usr/lib32/libnvidia-glsi.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvidia-glsi.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libnvidia-ifr.so</Path>
             <Path fileType="library">/usr/lib32/libnvidia-ifr.so.1</Path>
@@ -97,7 +92,6 @@
             <Path fileType="library">/usr/lib32/libnvidia-ptxjitcompiler.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvidia-ptxjitcompiler.so.390.87</Path>
             <Path fileType="library">/usr/lib32/libnvidia-tls.so</Path>
-            <Path fileType="library">/usr/lib32/libnvidia-tls.so.1</Path>
             <Path fileType="library">/usr/lib32/libnvidia-tls.so.390.87</Path>
             <Path fileType="library">/usr/lib32/vdpau/libvdpau_nvidia.so</Path>
             <Path fileType="library">/usr/lib32/vdpau/libvdpau_nvidia.so.1</Path>
@@ -130,7 +124,7 @@
             <Path fileType="library">/usr/lib/modprobe.d/nvidia.conf</Path>
             <Path fileType="library">/usr/lib/systemd/system/nvidia-persistenced.service</Path>
             <Path fileType="library">/usr/lib64/libEGL_nvidia.so</Path>
-            <Path fileType="library">/usr/lib64/libEGL_nvidia.so.1</Path>
+            <Path fileType="library">/usr/lib64/libEGL_nvidia.so.0</Path>
             <Path fileType="library">/usr/lib64/libEGL_nvidia.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libGLESv1_CM_nvidia.so</Path>
             <Path fileType="library">/usr/lib64/libGLESv1_CM_nvidia.so.1</Path>
@@ -151,31 +145,24 @@
             <Path fileType="library">/usr/lib64/libnvidia-cfg.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-cfg.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-compiler.so</Path>
-            <Path fileType="library">/usr/lib64/libnvidia-compiler.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-compiler.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-eglcore.so</Path>
-            <Path fileType="library">/usr/lib64/libnvidia-eglcore.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-eglcore.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-encode.so</Path>
             <Path fileType="library">/usr/lib64/libnvidia-encode.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-encode.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-fatbinaryloader.so</Path>
-            <Path fileType="library">/usr/lib64/libnvidia-fatbinaryloader.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-fatbinaryloader.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-fbc.so</Path>
             <Path fileType="library">/usr/lib64/libnvidia-fbc.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-fbc.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-glcore.so</Path>
-            <Path fileType="library">/usr/lib64/libnvidia-glcore.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-glcore.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-glsi.so</Path>
-            <Path fileType="library">/usr/lib64/libnvidia-glsi.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-glsi.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-gtk2.so</Path>
-            <Path fileType="library">/usr/lib64/libnvidia-gtk2.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-gtk2.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-gtk3.so</Path>
-            <Path fileType="library">/usr/lib64/libnvidia-gtk3.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-gtk3.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-ifr.so</Path>
             <Path fileType="library">/usr/lib64/libnvidia-ifr.so.1</Path>
@@ -190,7 +177,6 @@
             <Path fileType="library">/usr/lib64/libnvidia-ptxjitcompiler.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-ptxjitcompiler.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-tls.so</Path>
-            <Path fileType="library">/usr/lib64/libnvidia-tls.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvidia-tls.so.390.87</Path>
             <Path fileType="library">/usr/lib64/libnvidia-wfb.so</Path>
             <Path fileType="library">/usr/lib64/libnvidia-wfb.so.1</Path>
@@ -229,7 +215,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="11">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="12">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/4.19.9-105.current/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -256,12 +242,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="11">
-            <Date>2018-12-17</Date>
+        <Update release="12">
+            <Date>2018-12-21</Date>
             <Version>390.87</Version>
             <Comment>Packaging update</Comment>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>Longwu Ou</Name>
+            <Email>xulongwu4@gmail.com</Email>
         </Update>
     </History>
 </PISI>

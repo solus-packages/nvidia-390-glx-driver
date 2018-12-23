@@ -1,6 +1,6 @@
 name       : nvidia-390-glx-driver
 version    : '390.87'
-release    : 11
+release    : 12
 source     :
     - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.87/NVIDIA-Linux-x86_64-390.87.run : 38290a0b19e86037112f22397e02be9cdd6bcd677dd926b2977bbd49119e611e
 extract    : no
@@ -128,20 +128,13 @@ install    : |
     # Strip glvnd bits and OpenCL, we have those elsewhere
     rm -v $installdir/usr/lib{32,64}/{libGLX.so.0,libGL.so.1.7.0,libOpenGL.so.0,libOpenCL.so.1.0.0,libGLdispatch.so*}
 
-    # Get weird guys in order first
-    ln -sv libGLESv2_nvidia.so.${version} $installdir/%libdir%/libGLESv2_nvidia.so.2
-    ln -sv libGLESv2_nvidia.so.${version} $installdir/usr/lib32/libGLESv2_nvidia.so.2
-    ln -sv libGLX_nvidia.so.${version} $installdir/%libdir%/libGLX_nvidia.so.0
-    ln -sv libGLX_nvidia.so.${version} $installdir/usr/lib32/libGLX_nvidia.so.0
-
     function redo_libs() {
         for gl in $* ; do
             i=`dirname ${gl}`
             clean=`echo $(basename ${gl})|sed -e 's@\.so\.%version%@@g'`
-            if [[ ! -e $i/${clean}.so.2 ]] ; then
-                if [[ ! -e $i/${clean}.so.1 ]] && [[ ! -e $i/${clean}.so.0 ]] ; then
-                    ln -sv `basename ${gl}` $i/${clean}.so.1
-                fi
+            soname=`objdump -p ${gl} | grep SONAME | awk '{print $2}'`
+            if [[ ! -e $i/${soname} ]] ; then
+                ln -sv `basename ${gl}` $i/${soname}
             fi
             if [[ ! -e $i/{clean}.so ]]; then
                 ln -sv `basename ${gl}` $i/${clean}.so
