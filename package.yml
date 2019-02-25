@@ -1,8 +1,8 @@
 name       : nvidia-390-glx-driver
-version    : '390.87'
-release    : 19
+version    : '390.116'
+release    : 20
 source     :
-    - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.87/NVIDIA-Linux-x86_64-390.87.run : 38290a0b19e86037112f22397e02be9cdd6bcd677dd926b2977bbd49119e611e
+    - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.116/NVIDIA-Linux-x86_64-390.116.run : e179e89d0801652efec1a48c81c6eb327bee907519618721ab31d5a38461d880
 extract    : no
 homepage   : https://nvidia.com
 license    :
@@ -85,8 +85,6 @@ setup      : |
     # Patch for 4.14
     pushd current_kernel
     %patch -p2 < $pkgfiles/4.14_task.patch
-    %patch -p2 < $pkgfiles/4.19.patch
-    %patch -p2 < $pkgfiles/4.20.patch
     popd
 
     # We need systemd units.
