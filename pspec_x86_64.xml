@@ -3,8 +3,8 @@
         <Name>nvidia-390-glx-driver</Name>
         <Homepage>https://nvidia.com</Homepage>
         <Packager>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
         <License>EULA</License>
         <PartOf>kernel.drivers</PartOf>
@@ -20,7 +20,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="25">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="26">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/4.9.176-131.lts/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -42,7 +42,7 @@
 </Description>
         <PartOf>xorg.driver</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="25">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="26">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so</Path>
@@ -215,7 +215,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="25">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="26">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/5.0.16-116.current/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -242,12 +242,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="25">
-            <Date>2019-05-16</Date>
+        <Update release="26">
+            <Date>2019-06-05</Date>
             <Version>390.116</Version>
             <Comment>Packaging update</Comment>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>
