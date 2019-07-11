@@ -3,8 +3,8 @@
         <Name>nvidia-390-glx-driver</Name>
         <Homepage>https://nvidia.com</Homepage>
         <Packager>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua@stroblindustries.com</Email>
+            <Name>Thomas Staudinger</Name>
+            <Email>Staudi.Kaos@gmail.com</Email>
         </Packager>
         <License>EULA</License>
         <PartOf>kernel.drivers</PartOf>
@@ -20,7 +20,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="29">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="30">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/4.9.182-133.lts/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -42,7 +42,7 @@
 </Description>
         <PartOf>xorg.driver</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="29">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="30">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so</Path>
@@ -215,7 +215,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="29">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="30">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/5.1.14-121.current/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -242,12 +242,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="29">
-            <Date>2019-06-23</Date>
+        <Update release="30">
+            <Date>2019-07-07</Date>
             <Version>390.116</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua@stroblindustries.com</Email>
+            <Name>Thomas Staudinger</Name>
+            <Email>Staudi.Kaos@gmail.com</Email>
         </Update>
     </History>
 </PISI>
