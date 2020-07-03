@@ -20,7 +20,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="69">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="71">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/4.9.227-160.lts/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -42,7 +42,7 @@
 </Description>
         <PartOf>xorg.driver</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="69">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="71">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so</Path>
@@ -215,7 +215,7 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="69">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="71">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/5.6.18-156.current/kernel/drivers/video/nvidia-drm.ko</Path>
@@ -242,8 +242,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="69">
-            <Date>2020-06-20</Date>
+        <Update release="71">
+            <Date>2020-07-03</Date>
             <Version>390.132</Version>
             <Comment>Packaging update</Comment>
             <Name>Joshua Strobl</Name>
