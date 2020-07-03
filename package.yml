@@ -1,8 +1,8 @@
 name       : nvidia-390-glx-driver
-version    : '390.138'
-release    : 70
+version    : '390.132'
+release    : 69
 source     :
-    - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.138/NVIDIA-Linux-x86_64-390.138.run : 5ffb19e6c86c28e51d710f9679386e3c755161cf747bf3e83647a3486859d666
+    - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.132/NVIDIA-Linux-x86_64-390.132.run : b6532de659f96f7859f9d59ae30ab93d0a07141d37f229a570b30f96a5d2ff61
 extract    : no
 homepage   : https://nvidia.com
 license    :
@@ -89,6 +89,11 @@ setup      : |
 
     # We need systemd units.
     tar xf nvidia-persistenced-init.tar.bz2
+
+    pushd current_kernel
+        %patch -p1 < $pkgfiles/linux-5.5.patch
+        %patch -p1 < $pkgfiles/linux-5.6.patch
+    popd
 
 build      : |
     # Build kernel modules
