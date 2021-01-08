@@ -1,8 +1,8 @@
 name       : nvidia-390-glx-driver
-version    : '390.138'
-release    : 80
+version    : '390.141'
+release    : 81
 source     :
-    - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.138/NVIDIA-Linux-x86_64-390.138.run : 5ffb19e6c86c28e51d710f9679386e3c755161cf747bf3e83647a3486859d666
+    - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.141/NVIDIA-Linux-x86_64-390.141.run : 4b389a374412c80b2eda356c0fb9e8bef5768831d2cb77c8c9f906f6172c3f7e
 extract    : no
 homepage   : https://nvidia.com
 license    :
@@ -78,19 +78,8 @@ setup      : |
     sh $sources/NVIDIA-Linux-x86_64-$version.run --extract-only
     pushd NVIDIA*
 
-    # Patch for 4.14
-    pushd kernel
-        %patch -p2 < $pkgfiles/4.14_task.patch
-    popd
-
     # Prepare kernel trees
     cp -a kernel lts_kernel
-
-    # Patch for 5.10
-    %patch -p1 < $pkgfiles/kernel-5.8rc1.patch
-    %patch -p1 < $pkgfiles/kernel-5.9.patch
-    %patch -p1 < $pkgfiles/kernel-5.10.patch
-
     cp -a kernel current_kernel
 
     # We need systemd units.
