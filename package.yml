@@ -1,16 +1,16 @@
 name       : nvidia-390-glx-driver
-version    : '390.141'
-release    : 91
+version    : '390.143'
+release    : 92
 source     :
-    - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.141/NVIDIA-Linux-x86_64-390.141.run : 4b389a374412c80b2eda356c0fb9e8bef5768831d2cb77c8c9f906f6172c3f7e
+    - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.143/NVIDIA-Linux-x86_64-390.143.run : b722aa70f33bd44acaf196472cfb719a0ad6cefead7c49b1051bde092c1394ef
 extract    : no
 homepage   : https://nvidia.com
 license    :
     - EULA
 summary    :
-    - NVIDIA 390xx Binary Driver (LTS Kernel)
-    - common : Shared assets for the NVIDIA 390xx GLX Driver
-    - current : NVIDIA 390xx Binary Driver (Current Kernel)
+    - NVIDIA 390.xx Binary Driver (LTS Kernel)
+    - common : Shared assets for the NVIDIA 390.xx Binary Driver
+    - current : NVIDIA 390.xx Binary Driver (Current Kernel)
     - modaliases : These files are used by the Software Center for hardware detection
 component  :
     - kernel.drivers
@@ -18,8 +18,12 @@ component  :
     - current : kernel.drivers
     - modaliases : kernel.drivers
     - 32bit : xorg.driver
-description: |
-    NVIDIA Binary Driver
+description:
+    - NVIDIA 390.xx Binary Driver (LTS Kernel)
+    - common : Shared assets for the NVIDIA 390.xx Binary Driver
+    - current : NVIDIA 390.xx Binary Driver (Current Kernel)
+    - modaliases : These files are used by the Software Center for hardware detection
+    - 32bit : 32-bit libraries for NVIDIA 390.xx Binary Driver
 rundeps    :
     - common :
         - linux-driver-management
@@ -81,9 +85,6 @@ setup      : |
     # Prepare kernel trees
     cp -a kernel lts_kernel
     cp -a kernel current_kernel
-    pushd current_kernel
-    %patch -p1 < $pkgfiles/kernel-5.11.patch
-    popd
 
     # We need systemd units.
     tar xf nvidia-persistenced-init.tar.bz2
