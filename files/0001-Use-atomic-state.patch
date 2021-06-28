@@ -1,0 +1,45 @@
+From 5dc0b7827e21d6ced1f7d05f88e72ecd4ad523cc Mon Sep 17 00:00:00 2001
+From: Joshua Strobl <joshua@streambits.io>
+Date: Mon, 28 Jun 2021 19:49:54 +0300
+Subject: [PATCH 1/1] Use atomic state
+
+---
+ kernel/nvidia-drm/nvidia-drm-crtc.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/nvidia-drm/nvidia-drm-crtc.c b/nvidia-drm/nvidia-drm-crtc.c
+index 8abd1f3..952affd 100644
+--- a/nvidia-drm/nvidia-drm-crtc.c
++++ b/nvidia-drm/nvidia-drm-crtc.c
+@@ -131,11 +131,12 @@ plane_req_config_update(struct drm_plane_state *plane_state,
+ }
+ 
+ static int nv_drm_plane_atomic_check(struct drm_plane *plane,
+-                                     struct drm_plane_state *plane_state)
++                                     struct drm_atomic_state *state)
+ {
+     int i;
+     struct drm_crtc *crtc;
+     struct drm_crtc_state *crtc_state;
++    struct drm_plane_state *plane_state = drm_atomic_get_new_plane_state(state, plane);
+     NvKmsKapiPlaneType type;
+ 
+     if (NV_DRM_WARN(!drm_plane_type_to_nvkms_plane_type(plane->type, &type))) {
+@@ -166,12 +167,12 @@ done:
+ }
+ 
+ static void nv_drm_plane_atomic_update(struct drm_plane *plane,
+-                                       struct drm_plane_state *old_state)
++                                       struct drm_atomic_state *old_state)
+ {
+ }
+ 
+ static void nv_drm_plane_atomic_disable(struct drm_plane *plane,
+-                                        struct drm_plane_state *old_state)
++                                        struct drm_atomic_state *old_state)
+ {
+ }
+ 
+-- 
+2.32.0
+
