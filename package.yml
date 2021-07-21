@@ -1,8 +1,8 @@
 name       : nvidia-390-glx-driver
-version    : '390.143'
-release    : 103
+version    : '390.144'
+release    : 104
 source     :
-    - http://us.download.nvidia.com/XFree86/Linux-x86_64/390.143/NVIDIA-Linux-x86_64-390.143.run : b722aa70f33bd44acaf196472cfb719a0ad6cefead7c49b1051bde092c1394ef
+    - https://us.download.nvidia.com/XFree86/Linux-x86_64/390.144/NVIDIA-Linux-x86_64-390.144.run : 8bb6e8de89e8f8325466af29cf0fa235c988d19137f7fe3eb6bfae1d5e305e74
 extract    : no
 homepage   : https://nvidia.com
 license    :
@@ -85,9 +85,6 @@ setup      : |
     # Prepare kernel trees
     cp -a kernel lts_kernel
     cp -a kernel current_kernel
-    pushd current_kernel
-    %patch -p1 < $pkgfiles/0001-Use-atomic-state.patch
-    popd
 
     # We need systemd units.
     tar xf nvidia-persistenced-init.tar.bz2
