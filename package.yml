@@ -1,8 +1,8 @@
 name       : nvidia-390-glx-driver
-version    : '390.144'
-release    : 125
+version    : '390.147'
+release    : 126
 source     :
-    - https://us.download.nvidia.com/XFree86/Linux-x86_64/390.144/NVIDIA-Linux-x86_64-390.144.run : 8bb6e8de89e8f8325466af29cf0fa235c988d19137f7fe3eb6bfae1d5e305e74
+    - https://us.download.nvidia.com/XFree86/Linux-x86_64/390.147/NVIDIA-Linux-x86_64-390.147.run : bfd3835ee20a2a96b5f6a58c3e8fc3091145f0e398a7c2e3505f1649ac6b0c27
 extract    : no
 homepage   : https://nvidia.com
 license    :
@@ -85,9 +85,6 @@ setup      : |
     # Prepare kernel trees
     cp -a kernel lts_kernel
     cp -a kernel current_kernel
-    pushd current_kernel
-    %patch -p1 < $pkgfiles/linux-5.14.patch
-    popd
 
     # We need systemd units.
     tar xf nvidia-persistenced-init.tar.bz2
@@ -164,14 +161,14 @@ install    : |
     # Vulkan
     install -D -m 00644 nvidia_icd.json.template $installdir/usr/share/vulkan/icd.d/10_nvidia.json
     sed -e 's@__NV_VK_ICD__@libGLX_nvidia.so.0@' -i $installdir/usr/share/vulkan/icd.d/10_nvidia.json
+    # libnvidia-vulkan-producer.so has no SONAME set, so create the missing link manually
+    ln -s "libnvidia-vulkan-producer.so.$version" $installdir/%libdir%/libnvidia-vulkan-producer.so.1
 
     # EGL
     install -D -m 00644 10_nvidia_wayland.json $installdir/usr/share/egl/egl_external_platform.d/10_nvidia_wayland.json
-    install -D -m 00644 10_nvidia.json $installdir/usr/share/egl/egl_external_platform.d/10_nvidia.json
 
     # Make sure glvnd knows where to be
     install -D -d -m 00755 $installdir/usr/share/glvnd/egl_vendor.d
-    install -m 00644 10_nvidia_wayland.json $installdir/usr/share/glvnd/egl_vendor.d/10_nvidia_wayland.json
     install -m 00644 10_nvidia.json $installdir/usr/share/glvnd/egl_vendor.d/10_nvidia.json
 
     # Keep settings UI happy
