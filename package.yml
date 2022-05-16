@@ -1,6 +1,6 @@
 name       : nvidia-390-glx-driver
 version    : '390.151'
-release    : 131
+release    : 132
 source     :
     - https://us.download.nvidia.com/XFree86/Linux-x86_64/390.151/NVIDIA-Linux-x86_64-390.151.run : 5226e4842044cffd9096deadaf68934c133da74e05b80ccd21236584b3afb1fc
 extract    : no
@@ -37,22 +37,22 @@ rundeps    :
     - main : nvidia-390-glx-driver-common
     - current : nvidia-390-glx-driver-common
 conflicts  :
-    - nvidia-340-glx-driver
+    - nvidia-470-glx-driver
     - nvidia-glx-driver
     - nvidia-beta-driver
     - nvidia-developer-driver
     - common :
-        - nvidia-340-glx-driver-common
+        - nvidia-470-glx-driver-common
         - nvidia-glx-driver-common
         - nvidia-beta-driver-common
         - nvidia-developer-driver-common
     - 32bit :
-        - nvidia-340-glx-driver-32bit
+        - nvidia-470-glx-driver-32bit
         - nvidia-glx-driver-32bit
         - nvidia-beta-driver-32bit
         - nvidia-developer-driver-32bit
     - current :
-        - nvidia-340-glx-driver-current
+        - nvidia-470-glx-driver-current
         - nvidia-glx-driver-current
         - nvidia-beta-driver-current
         - nvidia-developer-driver-current
