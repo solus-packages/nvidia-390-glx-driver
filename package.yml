@@ -1,8 +1,8 @@
 name       : nvidia-390-glx-driver
-version    : '390.151'
-release    : 134
+version    : '390.154'
+release    : 135
 source     :
-    - https://us.download.nvidia.com/XFree86/Linux-x86_64/390.151/NVIDIA-Linux-x86_64-390.151.run : 5226e4842044cffd9096deadaf68934c133da74e05b80ccd21236584b3afb1fc
+    - https://us.download.nvidia.com/XFree86/Linux-x86_64/390.154/NVIDIA-Linux-x86_64-390.154.run : f4420280c55210964c008d5b724f2615845d47ad4c9c05d8ed26a62fc6331f7c
 extract    : no
 homepage   : https://nvidia.com
 license    :
@@ -27,12 +27,10 @@ description:
 rundeps    :
     - common :
         - linux-driver-management
-        - libva-vdpau-driver
         - egl-wayland
         - libglvnd
     - 32bit :
         - nvidia-390-glx-driver-common
-        - libva-vdpau-driver-32bit
         - libglvnd-32bit
     - main : nvidia-390-glx-driver-common
     - current : nvidia-390-glx-driver-common
