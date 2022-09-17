@@ -18,13 +18,13 @@
         <Description xml:lang="en">NVIDIA 390.xx Binary Driver (LTS Kernel)</Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="136">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="137">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/4.14.290-186.lts/kernel/drivers/video/nvidia-drm.ko</Path>
-            <Path fileType="data">/lib/modules/4.14.290-186.lts/kernel/drivers/video/nvidia-modeset.ko</Path>
-            <Path fileType="data">/lib/modules/4.14.290-186.lts/kernel/drivers/video/nvidia-uvm.ko</Path>
-            <Path fileType="data">/lib/modules/4.14.290-186.lts/kernel/drivers/video/nvidia.ko</Path>
+            <Path fileType="data">/lib/modules/4.14.293-187.lts/kernel/drivers/video/nvidia-drm.ko</Path>
+            <Path fileType="data">/lib/modules/4.14.293-187.lts/kernel/drivers/video/nvidia-modeset.ko</Path>
+            <Path fileType="data">/lib/modules/4.14.293-187.lts/kernel/drivers/video/nvidia-uvm.ko</Path>
+            <Path fileType="data">/lib/modules/4.14.293-187.lts/kernel/drivers/video/nvidia.ko</Path>
         </Files>
         <Conflicts>
             <Package>nvidia-470-glx-driver</Package>
@@ -39,7 +39,7 @@
         <Description xml:lang="en">32-bit libraries for NVIDIA 390.xx Binary Driver</Description>
         <PartOf>xorg.driver</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="136">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="137">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so</Path>
@@ -209,13 +209,13 @@
         <Description xml:lang="en">NVIDIA 390.xx Binary Driver (Current Kernel)</Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="136">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="137">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/5.15.61-217.current/kernel/drivers/video/nvidia-drm.ko</Path>
-            <Path fileType="data">/lib/modules/5.15.61-217.current/kernel/drivers/video/nvidia-modeset.ko</Path>
-            <Path fileType="data">/lib/modules/5.15.61-217.current/kernel/drivers/video/nvidia-uvm.ko</Path>
-            <Path fileType="data">/lib/modules/5.15.61-217.current/kernel/drivers/video/nvidia.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.68-218.current/kernel/drivers/video/nvidia-drm.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.68-218.current/kernel/drivers/video/nvidia-modeset.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.68-218.current/kernel/drivers/video/nvidia-uvm.ko</Path>
+            <Path fileType="data">/lib/modules/5.15.68-218.current/kernel/drivers/video/nvidia.ko</Path>
         </Files>
         <Conflicts>
             <Package>nvidia-470-glx-driver-current</Package>
@@ -235,8 +235,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="136">
-            <Date>2022-08-20</Date>
+        <Update release="137">
+            <Date>2022-09-17</Date>
             <Version>390.154</Version>
             <Comment>Packaging update</Comment>
             <Name>Beatrice T. Meyers</Name>
