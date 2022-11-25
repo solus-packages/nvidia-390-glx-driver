@@ -3,8 +3,8 @@
         <Name>nvidia-390-glx-driver</Name>
         <Homepage>https://nvidia.com</Homepage>
         <Packager>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>EULA</License>
         <PartOf>kernel.drivers</PartOf>
@@ -18,13 +18,13 @@
         <Description xml:lang="en">NVIDIA 390.xx Binary Driver (LTS Kernel)</Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="142">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="143">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/5.15.79-190.lts/kernel/drivers/video/nvidia-drm.ko.zst</Path>
-            <Path fileType="data">/lib/modules/5.15.79-190.lts/kernel/drivers/video/nvidia-modeset.ko.zst</Path>
-            <Path fileType="data">/lib/modules/5.15.79-190.lts/kernel/drivers/video/nvidia-uvm.ko.zst</Path>
-            <Path fileType="data">/lib/modules/5.15.79-190.lts/kernel/drivers/video/nvidia.ko.zst</Path>
+            <Path fileType="data">/lib/modules/5.15.79-191.lts/kernel/drivers/video/nvidia-drm.ko.zst</Path>
+            <Path fileType="data">/lib/modules/5.15.79-191.lts/kernel/drivers/video/nvidia-modeset.ko.zst</Path>
+            <Path fileType="data">/lib/modules/5.15.79-191.lts/kernel/drivers/video/nvidia-uvm.ko.zst</Path>
+            <Path fileType="data">/lib/modules/5.15.79-191.lts/kernel/drivers/video/nvidia.ko.zst</Path>
         </Files>
         <Conflicts>
             <Package>nvidia-470-glx-driver</Package>
@@ -39,7 +39,7 @@
         <Description xml:lang="en">32-bit libraries for NVIDIA 390.xx Binary Driver</Description>
         <PartOf>xorg.driver</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="142">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="143">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so</Path>
@@ -209,13 +209,13 @@
         <Description xml:lang="en">NVIDIA 390.xx Binary Driver (Current Kernel)</Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="142">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="143">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/6.0.9-221.current/kernel/drivers/video/nvidia-drm.ko.zst</Path>
-            <Path fileType="data">/lib/modules/6.0.9-221.current/kernel/drivers/video/nvidia-modeset.ko.zst</Path>
-            <Path fileType="data">/lib/modules/6.0.9-221.current/kernel/drivers/video/nvidia-uvm.ko.zst</Path>
-            <Path fileType="data">/lib/modules/6.0.9-221.current/kernel/drivers/video/nvidia.ko.zst</Path>
+            <Path fileType="data">/lib/modules/6.0.9-222.current/kernel/drivers/video/nvidia-drm.ko.zst</Path>
+            <Path fileType="data">/lib/modules/6.0.9-222.current/kernel/drivers/video/nvidia-modeset.ko.zst</Path>
+            <Path fileType="data">/lib/modules/6.0.9-222.current/kernel/drivers/video/nvidia-uvm.ko.zst</Path>
+            <Path fileType="data">/lib/modules/6.0.9-222.current/kernel/drivers/video/nvidia.ko.zst</Path>
         </Files>
         <Conflicts>
             <Package>nvidia-470-glx-driver-current</Package>
@@ -235,12 +235,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="142">
-            <Date>2022-11-23</Date>
+        <Update release="143">
+            <Date>2022-11-25</Date>
             <Version>390.157</Version>
             <Comment>Packaging update</Comment>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>
