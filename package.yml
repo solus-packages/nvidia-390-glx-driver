@@ -1,6 +1,6 @@
 name       : nvidia-390-glx-driver
 version    : '390.157'
-release    : 144
+release    : 145
 source     :
     - https://us.download.nvidia.com/XFree86/Linux-x86_64/390.157/NVIDIA-Linux-x86_64-390.157.run : 5bebbca6e8fed5d6b9d81070fb9e351f18edc534952553cbdc71e8fd0b9b328a
 extract    : no
