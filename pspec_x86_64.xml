@@ -3,8 +3,8 @@
         <Name>nvidia-390-glx-driver</Name>
         <Homepage>https://nvidia.com</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Thomas Staudinger</Name>
+            <Email>Staudi.Kaos@gmail.com</Email>
         </Packager>
         <License>EULA</License>
         <PartOf>kernel.drivers</PartOf>
@@ -18,7 +18,7 @@
         <Description xml:lang="en">NVIDIA 390.xx Binary Driver (LTS Kernel)</Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="151">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="152">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/5.15.110-198.lts/kernel/drivers/video/nvidia-drm.ko.zst</Path>
@@ -39,7 +39,7 @@
         <Description xml:lang="en">32-bit libraries for NVIDIA 390.xx Binary Driver</Description>
         <PartOf>xorg.driver</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="151">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="152">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so</Path>
@@ -209,7 +209,7 @@
         <Description xml:lang="en">NVIDIA 390.xx Binary Driver (Current Kernel)</Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="151">nvidia-390-glx-driver-common</Dependency>
+            <Dependency releaseFrom="152">nvidia-390-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/modules/6.2.14-232.current/kernel/drivers/video/nvidia-drm.ko.zst</Path>
@@ -235,12 +235,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="151">
-            <Date>2023-05-02</Date>
+        <Update release="152">
+            <Date>2023-05-08</Date>
             <Version>390.157</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Thomas Staudinger</Name>
+            <Email>Staudi.Kaos@gmail.com</Email>
         </Update>
     </History>
 </PISI>
